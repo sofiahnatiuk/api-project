@@ -97,7 +97,7 @@ class PublicUserAPITests(TestCase):
     def test_retrieve_user_unauthorized(self):
         res = self.client.get(ME_URL)
 
-        self.assertEqual(res.status_code, status.HTTP_401_UNATHORIZED)
+        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 class PrivateUserAPITests(TestCase):
     """Authentication required"""
